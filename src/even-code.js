@@ -1,14 +1,13 @@
-import whatsYourName from "../src/welcome.js";
-import askQuestion from "./question.js";
-import getAnswer from "./get-answer.js";
-import { correctAnswerResult, wrongAnswerResult } from "./answer-results.js";
-import readlineSync from 'readline-sync';
+import whatsYourName from './welcome.js';
+import askQuestion from './question.js';
+import getAnswer from './get-answer.js';
+import { correctAnswerResult, wrongAnswerResult } from './answer-results.js';
 
 const getCorrectAnser = (expression) => {
   if (expression % 2 === 0) {
     return 'yes';
-  } 
-    return 'no';
+  }
+  return 'no';
 };
 
 const even = () => {

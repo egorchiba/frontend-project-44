@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 const getAnswer = () => {
-  const userAnswer = readlineSync.question(`Your answer: `);
+  const userAnswer = readlineSync.question('Your answer: ');
 
   return userAnswer;
 };
