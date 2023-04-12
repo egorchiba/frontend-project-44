@@ -1,34 +1,27 @@
-import whatsYourName from './welcome.js';
-import askQuestion from './question.js';
-import getAnswer from './get-answer.js';
-import { correctAnswerResult, wrongAnswerResult } from './answer-results.js';
-
-const getCorrectAnser = (expression) => {
-  if (expression % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+import index from "./index.js";
 
 const even = () => {
-  const userName = whatsYourName();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  for (let i = 1; i <= 3; i += 1) {
-    const randomExpression = Math.floor(Math.random() * 101);
-    const answer = getCorrectAnser(randomExpression);
-    askQuestion(randomExpression);
-    const userAnswer = getAnswer();
-    if (userAnswer === answer) {
-      correctAnswerResult();
-    } else {
-      wrongAnswerResult(userAnswer, answer, userName);
-      break;
-    }
-    if (i === 3) {
-      console.log(`Congratulations, ${userName}!`);
-    }
+  const getExpression = () => {
+    const randomExpression = Math.floor(Math.random() * 100 + 1);
+  
+    return randomExpression;
   }
-};
+  
+  const getCorrectAnser = (expression) => {
+    if (expression % 2 === 0) {
+      return 'yes';
+    }
+    return 'no';
+  };
+  
+  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const expressionsAndAnswers = [[], [], []];
+  
+  for (let i = 0; i <= 2; i += 1) {
+    expressionsAndAnswers[i].push(getExpression());
+    expressionsAndAnswers[i].push(getCorrectAnser(expressionsAndAnswers[i][0])); 
+  }
+  index(rules, expressionsAndAnswers);
+}
 
 export default even;
