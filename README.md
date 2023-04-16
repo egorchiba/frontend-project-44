@@ -11,3 +11,6 @@ https://asciinema.org/a/OaYHQBhFjh0YDzew6ShMiYBo5
 
 Brain-nod:
 https://asciinema.org/a/JKXbguls0Xhwhj4hDm7tFxGMh
+
+Brain-progression:
+https://asciinema.org/a/KFjbmZPWoVzmHYLLxk9shri88
