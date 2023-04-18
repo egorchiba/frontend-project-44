@@ -1,21 +1,21 @@
 import index from './index.js';
 
-const prime = () => {
-  const getNumber = () => {
-    const randomNumber = Math.floor(Math.random() * 100 + 1);
+const getNumber = () => {
+  const randomNumber = Math.floor(Math.random() * 100 + 1);
 
-    return randomNumber;
-  };
+  return randomNumber;
+};
 
-  const isNumberPrime = (number) => {
-    for (let i = 2; i <= number / 2; i += 1) {
-      if (number % i === 0) {
-        return 'no';
-      }
+const isNumberPrime = (number) => {
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
+      return 'no';
     }
-    return 'yes';
-  };
+  }
+  return 'yes';
+};
 
+const prime = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const expressionsAndAnswers = [[], [], []];
 
