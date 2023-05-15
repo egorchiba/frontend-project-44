@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from '../index.js';
 
 const getProgressionInArray = () => {
   const firstElement = Math.floor(Math.random() * 99 + 1);

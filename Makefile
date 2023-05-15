@@ -14,7 +14,7 @@ brain-prime:
 	node bin/brain-prime.js
 
 brain-progression:
-	node brain-progression.js
+	node bin/brain-progression.js
 
 brain-games:
 	node bin/brain-games.js

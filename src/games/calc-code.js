@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from '../index.js';
 
 const calc = () => {
   const rules = 'What is the result of the expression?';

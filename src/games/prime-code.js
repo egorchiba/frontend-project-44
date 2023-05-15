@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from '../index.js';
 
 const getNumber = () => {
   const randomNumber = Math.floor(Math.random() * 100 + 1);

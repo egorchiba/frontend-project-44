@@ -1,4 +1,4 @@
-import index from './index.js';
+import index from '../index.js';
 
 const getGcd = (firstNumber, secondNumber) => {
   const maxNumber = Math.max(firstNumber, secondNumber);
