@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/egorchiba/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/egorchiba/frontend-project-44/actions)",
+  "description": "My first Hexlet project. 4 in 1 Brain Games. [![Actions Status](https://github.com/egorchiba/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/egorchiba/frontend-project-44/actions)",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Egor Chebanov",
   "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.10"
