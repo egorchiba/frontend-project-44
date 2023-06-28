@@ -14,7 +14,7 @@ const index = (rules, getQuestionAndAnswer) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    
+
     const [question, correctAnswer] = getQuestionAndAnswer();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');

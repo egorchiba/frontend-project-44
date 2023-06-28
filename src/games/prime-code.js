@@ -16,7 +16,7 @@ const startPrimeGame = () => {
     const question = getRandomNumber();
     const correctAnswer = isPrime(question) ? 'yes' : 'no';
     return [question, correctAnswer];
-  }
+  };
 
   index(rules, getQuestionAndAnswer);
 };

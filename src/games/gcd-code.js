@@ -25,7 +25,7 @@ const startGcdGame = () => {
     const question = `${firstNumber} ${secondNumber}`;
     const correctAnswer = String(getGcd(firstNumber, secondNumber));
     return [question, correctAnswer];
-  }
+  };
 
   index(rules, getQuestionAndAnswer);
 };

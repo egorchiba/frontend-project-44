@@ -22,7 +22,7 @@ const startCalcGame = () => {
         question = `${firstNumber} * ${secondNumber}`;
         correctAnswer = String(firstNumber * secondNumber);
     }
-    return [question, correctAnswer]
+    return [question, correctAnswer];
   };
 
   index(rules, getQuestionAndAnswer);

@@ -22,9 +22,9 @@ const startProgressionGame = () => {
     const correctAnswer = String(array[missingNumberIndex]);
     array[missingNumberIndex] = '..';
     const question = array.join(' ');
-    
+
     return [question, correctAnswer];
-  }
+  };
 
   index(rules, getQuestionAndAnswer);
 };
