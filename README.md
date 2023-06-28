@@ -1,5 +1,4 @@
 # Brain Games – frontend project 44
-
 ## Установка
 ```bach
 $ make install
