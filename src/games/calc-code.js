@@ -1,33 +1,31 @@
 import index from '../index.js';
+import getRandomNumber from '../utilities.js';
 
-const calc = () => {
+const startCalcGame = () => {
   const rules = 'What is the result of the expression?';
-  const expressionsAndAnswers = [[], [], []];
-
-  for (let i = 0; i <= 2; i += 1) {
-    const operationIndex = Math.floor(Math.random() * 2);
-    const firstNumber = Math.floor(Math.random() * 100);
-    const secondNumber = Math.floor(Math.random() * 100);
-    let expression;
+  const getQuestionAndAnswer = () => {
+    const operationIndex = getRandomNumber(0, 2);
+    const firstNumber = getRandomNumber();
+    const secondNumber = getRandomNumber();
+    let question;
     let correctAnswer;
     switch (operationIndex) {
       case 0:
-        expression = `${firstNumber} + ${secondNumber}`;
+        question = `${firstNumber} + ${secondNumber}`;
         correctAnswer = String(firstNumber + secondNumber);
         break;
       case 1:
-        expression = `${firstNumber} - ${secondNumber}`;
+        question = `${firstNumber} - ${secondNumber}`;
         correctAnswer = String(firstNumber - secondNumber);
         break;
       default:
-        expression = `${firstNumber} * ${secondNumber}`;
+        question = `${firstNumber} * ${secondNumber}`;
         correctAnswer = String(firstNumber * secondNumber);
     }
+    return [question, correctAnswer]
+  };
 
-    expressionsAndAnswers[i].push(expression);
-    expressionsAndAnswers[i].push(correctAnswer);
-  }
-  index(rules, expressionsAndAnswers);
+  index(rules, getQuestionAndAnswer);
 };
 
-export default calc;
+export default startCalcGame;

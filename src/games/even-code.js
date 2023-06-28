@@ -1,27 +1,15 @@
 import index from '../index.js';
+import getRandomNumber from '../utilities.js';
 
 const even = () => {
-  const getExpression = () => {
-    const randomExpression = Math.floor(Math.random() * 100 + 1);
-
-    return randomExpression;
-  };
-
-  const getCorrectAnser = (expression) => {
-    if (expression % 2 === 0) {
-      return 'yes';
-    }
-    return 'no';
-  };
-
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const expressionsAndAnswers = [[], [], []];
+  const getQuestionAndAnswer = () => {
+    const question = getRandomNumber();
+    const correctAnswer = (question % 2 === 0) ? 'yes' : 'no';
+    return [question, correctAnswer];
+  };
 
-  for (let i = 0; i <= 2; i += 1) {
-    expressionsAndAnswers[i].push(getExpression());
-    expressionsAndAnswers[i].push(getCorrectAnser(expressionsAndAnswers[i][0]));
-  }
-  index(rules, expressionsAndAnswers);
+  index(rules, getQuestionAndAnswer);
 };
 
 export default even;

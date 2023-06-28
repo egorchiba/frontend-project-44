@@ -1,8 +1,9 @@
 import index from '../index.js';
+import getRandomNumber from '../utilities.js';
 
 const getProgressionInArray = () => {
-  const firstElement = Math.floor(Math.random() * 99 + 1);
-  const step = Math.floor(Math.random() * 9);
+  const firstElement = getRandomNumber();
+  const step = getRandomNumber(1, 9);
   const arr = [];
   let element = firstElement;
   for (let i = 1; i <= 10; i += 1) {
@@ -13,21 +14,19 @@ const getProgressionInArray = () => {
   return arr;
 };
 
-const progression = () => {
+const startProgressionGame = () => {
   const rules = 'What number is missing in the progression?';
-  const expressionsAndAnswers = [[], [], []];
-
-  for (let i = 0; i <= 2; i += 1) {
-    const missingNumerIndex = Math.floor(Math.random() * 9);
+  const getQuestionAndAnswer = () => {
+    const missingNumberIndex = getRandomNumber(0, 9);
     const array = getProgressionInArray();
-    const correctAnswer = String(array[missingNumerIndex]);
-    array[missingNumerIndex] = '..';
-    const expression = array.join(' ');
-    expressionsAndAnswers[i].push(expression);
-    expressionsAndAnswers[i].push(correctAnswer);
+    const correctAnswer = String(array[missingNumberIndex]);
+    array[missingNumberIndex] = '..';
+    const question = array.join(' ');
+    
+    return [question, correctAnswer];
   }
 
-  index(rules, expressionsAndAnswers);
+  index(rules, getQuestionAndAnswer);
 };
 
-export default progression;
+export default startProgressionGame;

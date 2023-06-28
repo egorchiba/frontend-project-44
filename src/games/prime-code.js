@@ -1,29 +1,24 @@
 import index from '../index.js';
+import getRandomNumber from '../utilities.js';
 
-const getNumber = () => {
-  const randomNumber = Math.floor(Math.random() * 100 + 1);
-
-  return randomNumber;
-};
-
-const isNumberPrime = (number) => {
+const isPrime = (number) => {
   for (let i = 2; i <= number / 2; i += 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
-const prime = () => {
+const startPrimeGame = () => {
   const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const expressionsAndAnswers = [[], [], []];
-
-  for (let i = 0; i <= 2; i += 1) {
-    expressionsAndAnswers[i].push(getNumber());
-    expressionsAndAnswers[i].push(isNumberPrime(expressionsAndAnswers[i][0]));
+  const getQuestionAndAnswer = () => {
+    const question = getRandomNumber();
+    const correctAnswer = isPrime(question) ? 'yes' : 'no';
+    return [question, correctAnswer];
   }
-  index(rules, expressionsAndAnswers);
+
+  index(rules, getQuestionAndAnswer);
 };
 
-export default prime;
+export default startPrimeGame;
