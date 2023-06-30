@@ -19,6 +19,7 @@ const index = (rules, getQuestionAndAnswer) => {
       return;
     }
   }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default index;
