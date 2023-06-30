@@ -4,7 +4,7 @@ import getRandomNumber from '../utilities.js';
 const even = () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
   const getQuestionAndAnswer = () => {
-    const question = getRandomNumber();
+    const question = getRandomNumber(1, 100);
     const correctAnswer = (question % 2 === 0) ? 'yes' : 'no';
     return [question, correctAnswer];
   };

@@ -2,7 +2,7 @@ import index from '../index.js';
 import getRandomNumber from '../utilities.js';
 
 const getProgressionInArray = () => {
-  const firstElement = getRandomNumber();
+  const firstElement = getRandomNumber(1, 100);
   const step = getRandomNumber(1, 9);
   const arr = [];
   let element = firstElement;
